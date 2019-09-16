@@ -16,12 +16,12 @@ public class ProblemSet1 {
 
     public static void main(String[] args) {
 
-        final double length = 11;
-        final double width = 8.5;
-        final double lengthmm = length*25.4;
-        final double widthmm = width*25.4;
-        final double area = lengthmm*widthmm;
-        System.out.printf("\n%,.2f square millimeters.\n", area );
+        final double LENGTH = 11;
+        final double WIDTH = 8.5;
+        final double LENGTH_MM = LENGTH*25.4;
+        final double WIDTH_MM = WIDTH*25.4;
+        final double AREA = LENGTH_MM*WIDTH_MM;
+        System.out.printf("\n%,.2f square millimeters.\n", AREA );
 
 
 
@@ -31,10 +31,10 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double lengthCM = length*2.54;
-         final double widthCM = width*2.54;
-         final double perimeter = ((2*lengthCM)+(2*widthCM));
-         System.out.printf("\n%.2f centimeters.\n", perimeter);
+         final double LENGTH_CM = LENGTH*2.54;
+         final double WIDTH_CM = WIDTH*2.54;
+         final double PERIMETER = ((2*LENGTH_CM)+(2*WIDTH_CM));
+         System.out.printf("\n%.2f centimeters.\n", PERIMETER);
 
 
 
