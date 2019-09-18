@@ -127,7 +127,9 @@ public class ProblemSet1 {
          *
          * What is the surface area of a standard Cornhole board?
          */
-
+         final double BOARD_LENGTH = 48;
+         final double BOARD_WIDTH = 24;
+         final double HOLE_DIAMETER = 6;
 
 
         /*
