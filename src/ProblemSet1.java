@@ -112,6 +112,13 @@ public class ProblemSet1 {
          * I am planning a class trip next month. How many buses do I need, and how many
          * people will be on the last bus?
          */
+         final double STUDENTS = 273;
+         final double TEACHERS = 28;
+         final double CAPACITY = 54;
+         double buses = Math.ceil((STUDENTS+TEACHERS)/CAPACITY);
+         double remainder = (STUDENTS+TEACHERS)% 54;
+         System.out.printf("\n%.0f buses are needed, with ", buses);
+         System.out.printf("%.0f passengers on the last bus.", remainder);
 
 
 
