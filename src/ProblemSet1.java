@@ -45,6 +45,8 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
+        final double HYPOTENUSE = Math.hypot(LENGTH, WIDTH);
+        System.out.printf("\n%,.2f inches.\n", HYPOTENUSE);
 
 
         /*
@@ -63,6 +65,18 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
+
+        final double WEIGHT_Q = .35;
+        final double WEIGHT_H = .15;
+        final double WEIGHT_T = .50;
+
+        final double HOMEWORK = (homework1 + homework2 + homework3)*WEIGHT_H/3;
+        final double QUIZ = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
+        final double TEST = (test1 + test2 + test3)*WEIGHT_T/3;
+
+
+      final double GRADE = HOMEWORK + QUIZ + TEST;
+      System.out.printf("\n%,.2f%%\n", GRADE);
 
 
 
