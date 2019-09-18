@@ -18,10 +18,11 @@ public class ProblemSet1 {
 
         final double LENGTH = 11;
         final double WIDTH = 8.5;
-        final double LENGTH_MM = LENGTH*25.4;
-        final double WIDTH_MM = WIDTH*25.4;
-        final double AREA = LENGTH_MM*WIDTH_MM;
-        System.out.printf("\n%,.2f square millimeters.\n", AREA );
+        final double INCH_MM_CONV = 25.4;
+        double lengthMm = LENGTH*INCH_MM_CONV;
+        double widthMm = WIDTH*INCH_MM_CONV;
+        double area = lengthMm*widthMm;
+        System.out.printf("\n%,.2f square millimeters.\n", area );
 
 
 
@@ -30,11 +31,11 @@ public class ProblemSet1 {
          *
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
-
-         final double LENGTH_CM = LENGTH*2.54;
-         final double WIDTH_CM = WIDTH*2.54;
-         final double PERIMETER = ((2*LENGTH_CM)+(2*WIDTH_CM));
-         System.out.printf("\n%.2f centimeters.\n", PERIMETER);
+         final double INCH_CM_CONV = 2.54;
+         double lengthCm = LENGTH*INCH_CM_CONV;
+        double widthCm = WIDTH*INCH_CM_CONV;
+        double perimeter = ((2*lengthCm)+(2*widthCm));
+         System.out.printf("\n%.2f centimeters.\n", perimeter);
 
 
 
@@ -45,7 +46,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-        final double HYPOTENUSE = Math.hypot(LENGTH, WIDTH);
+        double HYPOTENUSE = Math.hypot(LENGTH, WIDTH);
         System.out.printf("\n%,.2f inches.\n", HYPOTENUSE);
 
 
@@ -70,13 +71,13 @@ public class ProblemSet1 {
         final double WEIGHT_H = .15;
         final double WEIGHT_T = .50;
 
-        final double HOMEWORK = (homework1 + homework2 + homework3)*WEIGHT_H/3;
-        final double QUIZ = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
-        final double TEST = (test1 + test2 + test3)*WEIGHT_T/3;
+        double homework = (homework1 + homework2 + homework3)*WEIGHT_H/3;
+        double quiz = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
+        double test = (test1 + test2 + test3)*WEIGHT_T/3;
 
 
-      final double GRADE = HOMEWORK + QUIZ + TEST;
-      System.out.printf("\n%,.2f%%\n", GRADE);
+        double grade = homework + quiz + test;
+        System.out.printf("\n%,.2f%%\n", grade);
 
 
 
@@ -86,8 +87,9 @@ public class ProblemSet1 {
          * I make $12.50/hour working as a cashier at a local supermarket. How much money
          * will I make this week?
          */
-
-
+        final double WAGE = 12.50;
+        double pay = ((7.5*WAGE)+(8*WAGE)+(10.5*WAGE)+(9.5*WAGE)+(6*WAGE)+(11.5*WAGE));
+        System.out.printf("\n%,.2f$\n", pay);
 
         /*
          * Exercise 6.
