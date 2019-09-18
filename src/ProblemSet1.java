@@ -89,14 +89,21 @@ public class ProblemSet1 {
          */
         final double WAGE = 12.50;
         double pay = ((7.5*WAGE)+(8*WAGE)+(10.5*WAGE)+(9.5*WAGE)+(6*WAGE)+(11.5*WAGE));
-        System.out.printf("\n%,.2f$\n", pay);
+        System.out.printf("\n$%,.2f\n", pay);
 
         /*
          * Exercise 6.
          *
          * What is my take-home pay each check?
          */
-
+         final double SALARY = 117000;
+         final double FED_TAX = 1 -.24;
+         final double STATE = 1 - .0637;
+         final double PRETAX_401K = 1 - .07;
+         double perPeriod = SALARY/24;
+         double annualAfter401k = perPeriod*PRETAX_401K;
+         double biWeeklyTakeHome = annualAfter401k*(FED_TAX*STATE);
+         System.out.printf("\n$%,.2f\n", biWeeklyTakeHome);
 
 
         /*
