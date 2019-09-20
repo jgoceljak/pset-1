@@ -21,8 +21,8 @@ public class ProblemSet1 {
         final double INCH_MM_CONV = 25.4;
         double lengthMm = LENGTH*INCH_MM_CONV;
         double widthMm = WIDTH*INCH_MM_CONV;
-        double area = lengthMm*widthMm;
-        System.out.printf("\n%,.2f square millimeters.\n", area );
+        double sheetArea = lengthMm*widthMm;
+        System.out.printf("\n%,.2f square millimeters.\n", sheetArea );
 
 
 
@@ -33,8 +33,8 @@ public class ProblemSet1 {
          */
          final double INCH_CM_CONV = 2.54;
          double lengthCm = LENGTH*INCH_CM_CONV;
-        double widthCm = WIDTH*INCH_CM_CONV;
-        double perimeter = ((2*lengthCm)+(2*widthCm));
+         double widthCm = WIDTH*INCH_CM_CONV;
+         double perimeter = ((2*lengthCm)+(2*widthCm));
          System.out.printf("\n%.2f centimeters.\n", perimeter);
 
 
@@ -74,8 +74,6 @@ public class ProblemSet1 {
         double homework = (homework1 + homework2 + homework3)*WEIGHT_H/3;
         double quiz = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
         double test = (test1 + test2 + test3)*WEIGHT_T/3;
-
-
         double grade = homework + quiz + test;
         System.out.printf("\n%,.2f%%\n", grade);
 
@@ -118,7 +116,7 @@ public class ProblemSet1 {
          double buses = Math.ceil((STUDENTS+TEACHERS)/CAPACITY);
          double remainder = (STUDENTS+TEACHERS)% 54;
          System.out.printf("\n%.0f buses are needed, with ", buses);
-         System.out.printf("%.0f passengers on the last bus.", remainder);
+         System.out.printf("%.0f passengers on the last bus.\n", remainder);
 
 
 
@@ -130,6 +128,12 @@ public class ProblemSet1 {
          final double BOARD_LENGTH = 48;
          final double BOARD_WIDTH = 24;
          final double HOLE_DIAMETER = 6;
+         double radius = HOLE_DIAMETER/2;
+         double circleArea = Math.PI*Math.pow(radius,2);
+         double rectangleArea = BOARD_WIDTH*BOARD_LENGTH;
+         double boardArea = rectangleArea - circleArea;
+         System.out.printf("\n%,.2f square inches.\n", boardArea);
+
 
 
         /*
@@ -137,7 +141,15 @@ public class ProblemSet1 {
          *
          * Are the years 2020, 2100, and 2400 leap years?
          */
-
+        int year1 = 2020;
+        int year2 = 2100;
+        int year3 = 2400;
+        boolean isLeapYear1 = (year1 % 4 == 0)&&((year1 % 100 != 0)||(year1 % 400 == 0));
+        boolean isLeapYear2 = (year2 % 4 == 0)&&((year2 % 100 != 0)||(year2 % 400 == 0));
+        boolean isLeapYear3 = (year3 % 4 == 0)&&((year3 % 100 != 0)||(year3 % 400 == 0));
+        System.out.println("\n" + year1 + " is a leap year..."+isLeapYear1);
+        System.out.println(year2 + " is a leap year..."+isLeapYear2);
+        System.out.println(year3 + " is a leap year..."+isLeapYear3);
 
 
         /*
