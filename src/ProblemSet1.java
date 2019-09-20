@@ -75,7 +75,7 @@ public class ProblemSet1 {
         double quiz = (quiz1 + quiz2 + quiz3)*WEIGHT_Q/3;
         double test = (test1 + test2 + test3)*WEIGHT_T/3;
         double grade = homework + quiz + test;
-        System.out.printf("\n%,.2f%%\n", grade);
+        System.out.printf("\n%,.2f%%.\n", grade);
 
 
 
@@ -87,7 +87,7 @@ public class ProblemSet1 {
          */
         final double WAGE = 12.50;
         double pay = ((7.5*WAGE)+(8*WAGE)+(10.5*WAGE)+(9.5*WAGE)+(6*WAGE)+(11.5*WAGE));
-        System.out.printf("\n$%,.2f\n", pay);
+        System.out.printf("\n$%,.2f.\n", pay);
 
         /*
          * Exercise 6.
@@ -101,7 +101,7 @@ public class ProblemSet1 {
          double perPeriod = SALARY/24;
          double annualAfter401k = perPeriod*PRETAX_401K;
          double biWeeklyTakeHome = annualAfter401k*(FED_TAX*STATE);
-         System.out.printf("\n$%,.2f\n", biWeeklyTakeHome);
+         System.out.printf("\n$%,.2f.\n", biWeeklyTakeHome);
 
 
         /*
@@ -147,9 +147,9 @@ public class ProblemSet1 {
         boolean isLeapYear1 = (year1 % 4 == 0)&&((year1 % 100 != 0)||(year1 % 400 == 0));
         boolean isLeapYear2 = (year2 % 4 == 0)&&((year2 % 100 != 0)||(year2 % 400 == 0));
         boolean isLeapYear3 = (year3 % 4 == 0)&&((year3 % 100 != 0)||(year3 % 400 == 0));
-        System.out.println("\n" + year1 + " is a leap year..."+isLeapYear1);
-        System.out.println(year2 + " is a leap year..."+isLeapYear2);
-        System.out.println(year3 + " is a leap year..."+isLeapYear3);
+        System.out.println("\n" + year1 + " is a leap year..."+isLeapYear1 +".");
+        System.out.println(year2 + " is a leap year..."+isLeapYear2 +".");
+        System.out.println(year3 + " is a leap year..."+isLeapYear3 +".");
 
 
         /*
@@ -157,6 +157,10 @@ public class ProblemSet1 {
          *
          * What is the wind chill?
          */
+         double temperature = 38;
+         double windSpeed = 14;
+         double windChill = 35.74 + (.621*temperature) + (((0.427*temperature)-35.75)*Math.pow(windSpeed, .16));
+         System.out.printf("\n%,.1f degrees.\n", windChill);
 
 
 
